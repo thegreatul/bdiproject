@@ -1,0 +1,73 @@
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.css" />
+<style>
+/* Datepicker popup icon */
+
+button.calendar, button.calendar:active {
+width: 2.75rem;
+height: 2.35rem;
+background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=') !important;
+background-repeat: no-repeat;
+background-size: 23px;
+background-position: center;
+}
+
+</style>
+<div class="content" role="main">
+    <div class="card highlight-card card-small">
+       ASURANSI JIWA
+    </div>  
+</div>
+<p class="content">Kesesuaian Produk Asuransi</p>
+<div class="content">
+    <div>
+        <p>Apakah besar Premi bulanan yang akan Anda bayarkan melebihi 10% dari total pendapatan bulanan Anda?</p>
+    </div>
+    <div>
+        <input type="radio" id="1" name="pendapatan" value="Ya">
+        <label for="1">Ya</label>
+        <input type="radio" id="2" name="pendapatan" value="Tidak">
+        <label for="2">Tidak</label>
+    </div>
+    <hr/>
+    <div>
+        <input type="checkbox" name="sesuaiKebutuhan" value="1" checked="checked" />
+        <p>Program Asuransi Primajaga 100 life basic yang telah dijelaskan oleh tenaga pemasar telah sesuai dengan kebutuhan saya</p>
+    </div>
+</div>
+<p class="content">Data Peserta Asuransi</p>
+<div class="content">
+    <div *ngFor="let dataPeserta of dataPeserta; index as productId">
+        <div> Nama Lengkap : {{ dataPeserta.fullname }}</div>
+        <div> Jenis Kelamin : {{dataPeserta.gender}}</div>
+        <div> No Identitas : {{dataPeserta.noid}}</div>
+        <div>tempat Lahir : {{dataPeserta.tempatLahir}}</div>
+        <div>tanggal Lahir : {{dataPeserta.tanggalLahir}}</div>
+        <div>status: {{dataPeserta.status}}</div>
+        <div>alamat Identitas: {{dataPeserta.alamatIdentitas}}</div>
+        <div>kota: {{dataPeserta.kota}}</div>
+        <div>provinsi: {{dataPeserta.provinsi}}</div>
+        <div>negara: {{dataPeserta.negara}}</div>
+        <div>kodepos: {{dataPeserta.kodepos}}</div>
+        <div>handphone: {{dataPeserta.handphone}}</div>
+        <div>email: {{dataPeserta.email}}</div>
+    </div>    
+</div>
+<p class="content">Data Ahli Waris</p>
+<div class="content">
+    <div>Nama Lengkap : <input type="text" id="fname" name="fname" disabled="true" value="Andi Setiawan"></div>
+    <div>Tanggal Lahir : <input type="text" id="ttl" name="ttl" disabled="true" value="20/10/1980"></div>
+    <div>Jenis Kelamin :
+        <input type="radio" id="1" name="male" value="Ya" checked="checked">Pria
+        <input type="radio" id="2" name="female" value="Tidak"> Wanita
+    </div>
+    <div>Hubungan : <input type="text" id="relasi" name="relasi" disabled="true" value="Saudara Kandung"></div>
+    <div>
+        <a class="card" routerLink="/JiwaDetail" routerLinkActive="active">Ulangi</a>
+      </div>
+      <div>
+        <a class="card" routerLink="/JiwaPembayaran" routerLinkActive="active">Lanjut</a>
+      </div>
+</div>
+

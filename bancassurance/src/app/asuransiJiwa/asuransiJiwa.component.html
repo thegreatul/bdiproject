@@ -1,0 +1,56 @@
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.css" />
+<style>
+/* Datepicker popup icon */
+
+button.calendar, button.calendar:active {
+width: 2.75rem;
+height: 2.35rem;
+background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=') !important;
+background-repeat: no-repeat;
+background-size: 23px;
+background-position: center;
+}
+
+</style>
+<div class="content" role="main">
+    <div class="card highlight-card card-small">
+       ASURANSI JIWA
+    </div>  
+</div>
+
+<div class="content">
+  <p>Cari Asuransi</p>
+  <div> 
+      <label>Jangka Waktu Perlindungan:</label>
+      <select id="jangkaWaktu">
+        <option value="1">1 Tahun</option>
+        <option value="2">2 Tahun</option>
+        <option value="3">3 Tahun</option>
+        <option value="4">4 Tahun</option>
+        <option value="5">5 Tahun</option>
+        <option value="6">6 Tahun</option>
+        <option value="7">7 Tahun</option>
+        <option value="8">8 Tahun</option>
+      </select>  
+  </div>
+  <div>
+    <label>Tanggal Lahir:</label>
+    <input type="text" ngbDatepicker #d="ngbDatepicker" placeholder="yyyy-mm-dd"/>
+    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+  </div>
+  
+</div>
+<div class="content">
+  <div>
+    <a class="card" routerLink="/SemuaProduk" routerLinkActive="active">Kembali</a>
+  </div>
+  <div>
+    <a class="card" routerLink="/PilihJiwa" routerLinkActive="active">Cari Asuransi</a>
+  </div>
+</div>
+
+
+
+

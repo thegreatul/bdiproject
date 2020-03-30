@@ -1,0 +1,48 @@
+<style>
+/* Datepicker popup icon */
+
+button.calendar, button.calendar:active {
+width: 2.75rem;
+height: 2.35rem;
+background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=') !important;
+background-repeat: no-repeat;
+background-size: 23px;
+background-position: center;
+}
+
+</style>
+<div class="content" role="main">
+    <div class="card highlight-card card-small">
+      Informasi ASURANSI JIWA
+    </div>  
+</div>
+<div class="content">
+    <div>Informasi</div>
+    <b>Pengajuan aplikasi sedang dalam tahap verifikasi</b>
+    <p>Selamat, pengajuan produk asuransi Primajaga 100 Anda sudah berhasil diajukan. Saat ini dalam tahap verifikasi oleh Manulife Indonesia. E-Certificate Asuransi Anda akan dikirimkan ke inbox D-Bank / alamat email terdaftar jika pengajuan Anda disetujui.</p>
+</div>
+<p class="content"><b>Informasi</b></p>
+<div class="content">
+    <div *ngFor="let dataReferensi of dataReferensi; index as productId">
+        <div> No. Referensi : {{ dataReferensi.noRef }}</div>
+        <div> Tanggal : {{ dataReferensi.tanggal }}</div>
+        <div> Sumber Rekening : {{ dataReferensi.rekSumber }}</div>
+        <div> Produk Asuransi : {{ dataReferensi.produk }}</div>
+        <div> uangPertanggungan : {{dataReferensi.uangPertanggungan}}</div>
+        <div> premi : {{dataReferensi.premi}}</div>
+        <div>frekuensiBayar : {{dataReferensi.frekuensiBayar}}</div>
+        <div>jangkaWaktu : {{dataReferensi.jangkaWaktu}}</div>
+        <div>masaBayarPremi: {{dataReferensi.masaBayarPremi}}</div>
+    </div>    
+</div>
+<div class="content">
+    <div>
+        <a class="card" routerLink="" routerLinkActive="active">Cetak</a>
+    </div>
+    <div>
+        <a class="card" routerLink="" routerLinkActive="active">Simpan</a>
+    </div>
+    <div>
+        <a class="card" routerLink="/AsuransiSaya" routerLinkActive="active">OK</a>
+    </div>
+</div>

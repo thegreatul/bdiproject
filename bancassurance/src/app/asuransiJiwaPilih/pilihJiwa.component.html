@@ -1,0 +1,17 @@
+<div class="content" role="main">
+    <div class="card highlight-card card-small">
+       PILIH ASURANSI JIWA
+    </div>  
+    
+</div>
+<div class="content">
+    
+        <div *ngFor="let jiwa of jiwa; index as productId" class="card-container">
+            <div > {{ jiwa.name }}</div>
+            <div> Price: {{jiwa.price}}</div>
+            <div>{{jiwa.description}}</div>
+            <a class="card" routerLink="/JiwaDetail" routerLinkActive="active">Pilih</a>
+        </div>
+        
+</div>
+

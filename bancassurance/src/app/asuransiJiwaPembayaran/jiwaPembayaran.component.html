@@ -1,0 +1,48 @@
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.css" />
+<style>
+/* Datepicker popup icon */
+
+button.calendar, button.calendar:active {
+width: 2.75rem;
+height: 2.35rem;
+background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=') !important;
+background-repeat: no-repeat;
+background-size: 23px;
+background-position: center;
+}
+
+</style>
+<div class="content" role="main">
+    <div class="card highlight-card card-small">
+       PEMBAYARAN ASURANSI JIWA
+    </div>  
+</div>
+<div class="content">
+    <div>Detail Asuransi</div>
+</div>
+<p class="content">Data Asuransi</p>
+<div class="content">
+    <div *ngFor="let dataAsuransi of dataAsuransi; index as productId">
+        <div> Produk Asuransi : {{ dataAsuransi.produk }}</div>
+        <div> uangPertanggungan : {{dataAsuransi.uangPertanggungan}}</div>
+        <div> premi : {{dataAsuransi.premi}}</div>
+        <div>frekuensiBayar : {{dataAsuransi.frekuensiBayar}}</div>
+        <div>jangkaWaktu : {{dataAsuransi.jangkaWaktu}}</div>
+        <div>masaBayarPremi: {{dataAsuransi.masaBayarPremi}}</div>
+    </div>    
+</div>
+<p class="content">Informasi Pembayaran</p>
+<div class="content">
+  <div>Rekening Sumber Dana : <input type="text" id="sumberDana" name="sumberDana" disabled="true" value="Tabungan Danamon... 003598591234 IDR 15.192.000,00" size="50"></div>
+  <div>Kode Referal : <input type="text" id="koderef" name="koderef" disabled="true" value="Silahkan Ketik"></div>      
+</div>
+<div class="content">
+    <div>
+        <a class="card" routerLink="/JiwaData" routerLinkActive="active">Kembali</a>
+      </div>
+      <div>
+        <a class="card" routerLink="/JiwaKonfirmasi" routerLinkActive="active">Lanjut</a>
+      </div>
+</div>
