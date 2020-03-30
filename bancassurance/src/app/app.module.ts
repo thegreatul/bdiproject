@@ -16,6 +16,8 @@ import { AsuransiJiwaPembayaranComponent } from './asuransiJiwaPembayaran/jiwaPe
 import { AsuransiJiwaKonfirmasiComponent } from './asuransiJiwaKonfirmasi/jiwaKonfirmasi.component';
 import { AsuransiJiwaInformasiComponent } from './asuransiJiwaInformasi/jiwaInformasi.component';
 import { AsuransiJiwaDetailStatusComponent } from './asuransiJiwaDetailStatus/jiwaDetailStatus.component';
+import { AsuransiPerjalananComponent } from './asuransiPerjalanan/asuransiPerjalanan.component';
+import { AsuransiMobilComponent } from './asuransiMobil/asuransiMobil.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 @NgModule({
@@ -31,7 +33,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AsuransiJiwaPembayaranComponent,
     AsuransiJiwaKonfirmasiComponent,
     AsuransiJiwaInformasiComponent,
-    AsuransiJiwaDetailStatusComponent
+    AsuransiJiwaDetailStatusComponent,
+    AsuransiPerjalananComponent,
+    AsuransiMobilComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         { path: 'JiwaPembayaran', component: AsuransiJiwaPembayaranComponent },
         { path: 'JiwaKonfirmasi', component: AsuransiJiwaKonfirmasiComponent },
         { path: 'JiwaInformasi', component: AsuransiJiwaInformasiComponent },
-        { path: 'JiwaDetailStatus', component: AsuransiJiwaDetailStatusComponent }
+        { path: 'JiwaDetailStatus', component: AsuransiJiwaDetailStatusComponent },
+        { path: 'AsuransiPerjalanan', component: AsuransiPerjalananComponent },
+        { path: 'AsuransiMobil', component: AsuransiMobilComponent }
       ]
     ),
     BrowserAnimationsModule
