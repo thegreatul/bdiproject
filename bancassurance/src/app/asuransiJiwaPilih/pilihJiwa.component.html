@@ -1,17 +1,123 @@
-<div class="content" role="main">
+<div class="container">    
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="panel panel-primary">
+          <div class="panel-heading">PRIMAJAGA 100 MANULIFE</div>
+          <div class="panel-body">
+            <div *ngFor="let jiwa of jiwa" class="card-container">
+                <div > {{ jiwa.asuransi_1.nama_asuransi }}</div>
+                <div > {{ jiwa.asuransi_1.biaya }}</div>
+                <div > {{ jiwa.asuransi_1.jangka_waktu_perlindungan }}</div>
+                <div > {{ jiwa.asuransi_1.manfaat_bulanan }}</div>
+                <div > {{ jiwa.asuransi_1.manfaat_dibayarkan }}</div>
+                <div > {{ jiwa.asuransi_1.biaya }}</div>                
+                <div > {{ jiwa.asuransi_1.tipe_pembayaran }}</div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <a routerLink="/JiwaDetail" routerLinkActive="active">Pilih</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">PRIMAJAGA 100 MANULIFE</div>
+          <div class="panel-body">
+            <div *ngFor="let jiwa of jiwa" class="card-container">
+                <div > {{ jiwa.asuransi_2.nama_asuransi }}</div>
+                <div > {{ jiwa.asuransi_2.biaya }}</div>
+                <div > {{ jiwa.asuransi_2.jangka_waktu_perlindungan }}</div>
+                <div > {{ jiwa.asuransi_2.manfaat_bulanan }}</div>
+                <div > {{ jiwa.asuransi_2.manfaat_dibayarkan }}</div>
+                <div > {{ jiwa.asuransi_2.biaya }}</div>                
+                <div > {{ jiwa.asuransi_2.tipe_pembayaran }}</div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <a routerLink="/JiwaDetail" routerLinkActive="active">Pilih</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">PRIMAJAGA 100 MANULIFE</div>
+          <div class="panel-body">
+            <div *ngFor="let jiwa of jiwa" class="card-container">
+                <div > {{ jiwa.asuransi_3.nama_asuransi }}</div>
+                <div > {{ jiwa.asuransi_3.biaya }}</div>
+                <div > {{ jiwa.asuransi_3.jangka_waktu_perlindungan }}</div>
+                <div > {{ jiwa.asuransi_3.manfaat_bulanan }}</div>
+                <div > {{ jiwa.asuransi_3.manfaat_dibayarkan }}</div>
+                <div > {{ jiwa.asuransi_3.biaya }}</div>                
+                <div > {{ jiwa.asuransi_3.tipe_pembayaran }}</div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <a routerLink="/JiwaDetail" routerLinkActive="active">Pilih</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">PRIMAJAGA 100 MANULIFE</div>
+          <div class="panel-body">
+            <div *ngFor="let jiwa of jiwa" class="card-container">
+                <div > {{ jiwa.asuransi_4.nama_asuransi }}</div>
+                <div > {{ jiwa.asuransi_4.biaya }}</div>
+                <div > {{ jiwa.asuransi_4.jangka_waktu_perlindungan }}</div>
+                <div > {{ jiwa.asuransi_4.manfaat_bulanan }}</div>
+                <div > {{ jiwa.asuransi_4.manfaat_dibayarkan }}</div>
+                <div > {{ jiwa.asuransi_4.biaya }}</div>                
+                <div > {{ jiwa.asuransi_4.tipe_pembayaran }}</div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <a routerLink="/JiwaDetail" routerLinkActive="active">Pilih</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+<!--   
+<div class="container">
     <div class="card highlight-card card-small">
-       PILIH ASURANSI JIWA
-    </div>  
-    
-</div>
-<div class="content">
-    
+        PILIH ASURANSI JIWA
+     </div>  <br/>
+     <div class="panel panel-primary">
+        <div class="panel-heading">BANCASSURANCE</div>
+        <div class="panel-body">
+            <div *ngFor="let jiwa of jiwa; index as productId" class="card-container">
+                <div > {{ jiwa.asuransi_1.nama_asuransi }}</div>
+                <div > {{ jiwa.asuransi_1.biaya }}</div>
+                <div > {{ jiwa.asuransi_1.jangka_waktu_perlindungan }}</div>
+                <div > {{ jiwa.asuransi_1.manfaat_bulanan  }}</div>
+                <a class="card" routerLink="/JiwaDetail" routerLinkActive="active">Pilih</a>
+            </div>
+        </div>
+        <div class="panel-heading">BANCASSURANCE</div>
+        <div class="panel-body">
+            <div *ngFor="let jiwa of jiwa; index as productId" class="card-container">
+                <div > {{ jiwa.asuransi_2.nama_asuransi }}</div>
+                <div > {{ jiwa.asuransi_2.biaya }}</div>
+                <div > {{ jiwa.asuransi_2.jangka_waktu_perlindungan }}</div>
+                <div > {{ jiwa.asuransi_2.manfaat_bulanan  }}</div>
+                <a class="card" routerLink="/JiwaDetail" routerLinkActive="active">Pilih</a>
+            </div>
+        </div>
         <div *ngFor="let jiwa of jiwa; index as productId" class="card-container">
-            <div > {{ jiwa.name }}</div>
-            <div> Price: {{jiwa.price}}</div>
-            <div>{{jiwa.description}}</div>
+            <div > {{ jiwa.asuransi_3.nama_asuransi }}</div>
+            <div > {{ jiwa.asuransi_3.biaya }}</div>
+            <div > {{ jiwa.asuransi_3.jangka_waktu_perlindungan }}</div>
+            <div > {{ jiwa.asuransi_3.manfaat_bulanan  }}</div>
             <a class="card" routerLink="/JiwaDetail" routerLinkActive="active">Pilih</a>
         </div>
-        
+        <div *ngFor="let jiwa of jiwa; index as productId" class="card-container">
+            <div > {{ jiwa.asuransi_4.nama_asuransi }}</div>
+            <div > {{ jiwa.asuransi_4.biaya }}</div>
+            <div > {{ jiwa.asuransi_4.jangka_waktu_perlindungan }}</div>
+            <div > {{ jiwa.asuransi_4.manfaat_bulanan  }}</div>
+            <a class="card" routerLink="/JiwaDetail" routerLinkActive="active">Pilih</a>
+        </div>
+    </div>
 </div>
-
+-->

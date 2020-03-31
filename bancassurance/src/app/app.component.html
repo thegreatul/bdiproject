@@ -301,12 +301,12 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <img
-    width="40"
+    width="10%"
     alt="Danamon Logo"
-    src=""
+    src="assets/img/Danamon.png"
   />
   
-    <div class="spacer">Beranda</div>
+    <div class="spacer"><a routerLink="" routerLinkActive="active">Beranda</a></div>
     <div class="spacer">Akun</div>
     <div class="spacer">Transaksi</div>
     <div class="spacer">Pinjaman</div>
@@ -314,17 +314,29 @@
     <div class="spacer">Logout</div>
 </div>
 
+
 <div class="content" role="main">
   <div class="card highlight-card card-small">
      BANCASSURANCE
   </div>
 
 </div>
-
 <div class="content">
-  <div class="highlight-card"> <a routerLink="/SemuaProduk" routerLinkActive="active">Produk Asuransi</a>
-    <a routerLink="/AsuransiSaya" routerLinkActive="active">Asuransi Saya</a></div>
-  <div></div> 
+  <ul class="list-inline">
+    <li><a routerLink="/SemuaProduk" routerLinkActive="active"><h3><b>Produk Asuransi</b></h3></a></li>
+    <li><a routerLink="/AsuransiSaya" routerLinkActive="active"><h3><b>Asuransi Saya</b></h3></a></li>
+  </ul>
+</div>
+
+<div class="container">
+  <h2>Progress - Pengajuan Aplikasi Asuransi Anda</h2>
+  <ul class="pagination">
+    <li><a href="/AsuransiJiwa">1</a></li>
+    <li><a href="/PilihJiwa">2</a></li>
+    <li><a href="/JiwaDetail">3</a></li>
+    <li><a href="/JiwaData">4</a></li>
+    <li><a href="/JiwaPembayaran">5</a></li>
+  </ul>
 </div>
 
 <router-outlet></router-outlet>

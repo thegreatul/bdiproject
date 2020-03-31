@@ -1,10 +1,13 @@
 export const jiwaDetail = [
     {
       name: 'Primajaga 100',
-      provider: 'Manulife',
-      price: '50.000',
       description: 'Premi mulai dari IDR 10.000 - IDR 1.000.000',
-      manfaat: '1. Manfaat Meninggal' + ' Jika  Tertanggung  meninggal  dunia  karena  sebab  apapun,  manfaat  meninggal  dunia yang akan dibayarkan mengikuti formula berikut:Manfaat  Meninggal  =  Uang  Pertanggungan  ditambah  dengan  Nilai  Polis  Premi  Dasar dan Nilai Polis Top Up. '+
-      '2. Manfaat Akhir Pertanggungan' + ' Apabila Tertanggung mencapai usia 99 tahun, maka Pemegang Polis akan memperoleh Manfaat    Akhir    Pertanggungan    sebesar    Nilai    Polis    (jika    ada)    beserta    hasil pengembangannya (jika ada).'
+      manfaat: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua -Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. -Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. -Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.-Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.',
+      syarat_ketentuan: '-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. -Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. -Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. -Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      klaim: '-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. -Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. -Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. -Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. -Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. -Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. -Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Premi 100.000/bulan',
+      manfaat_footer: 'Ringkasan Informasi Produk | F.A.Q | Brosur',
+      syarat_ketentuan_footer: 'Syarat & Ketentuan Lengkap',
+      klaim_footer: 'Hello Danamon: 1-500-090',
+      premi: 'IDR25.000 per bulan'
     }
 ];

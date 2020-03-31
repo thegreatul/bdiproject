@@ -1,16 +1,24 @@
-<div class="content" role="main">
-    <div class="card highlight-card card-small">
-       ASURANSI JIWA DETAIL
-    </div>  
-    
-</div>
-<div *ngFor="let jiwaDetail of jiwaDetail; index as productId" class="card-container">
-    <p> {{ jiwaDetail.name }}</p>
-    <p> Provider: {{jiwaDetail.provider}}</p>
-    <p> Price: {{jiwaDetail.price}}</p>
-    <p>{{jiwaDetail.description}}</p>
-    <p>{{jiwaDetail.manfaat}}</p>
-</div>
-<div class="content">
-    <a class="card" routerLink="/JiwaData" routerLinkActive="active">Lanjut</a>
-  </div>
+<div class="container">    
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">ASURANSI JIWA DETAIL</div>
+          <div class="panel-body">
+            <div *ngFor="let jiwaDetail of jiwaDetail; index as productId" class="card-container">
+                <p> {{ jiwaDetail.name }}</p>                
+                <p>Manfaat: {{jiwaDetail.manfaat}}</p>
+                <p>Syarat & Ketentuan :{{jiwaDetail.syarat_ketentuan}}</p>
+                <p>Klaim : {{jiwaDetail.klaim}}</p>
+                <p>{{jiwaDetail.manfaat_footer}}</p>
+                <p>{{jiwaDetail.syarat_ketentuan_footer}}</p>
+                <p>{{jiwaDetail.klaim_footer}}</p>
+                <p>{{jiwaDetail.premi}}</p>                
+            </div>
+          </div>
+          <div class="panel-footer">
+            <a routerLink="/JiwaData" routerLinkActive="active">Lanjut</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br><br>

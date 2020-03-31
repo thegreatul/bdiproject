@@ -14,35 +14,34 @@ background-position: center;
 }
 
 </style>
-<div class="content" role="main">
-    <div class="card highlight-card card-small">
-       PEMBAYARAN ASURANSI JIWA
-    </div>  
-</div>
-<div class="content">
-    <div>Detail Asuransi</div>
-</div>
-<p class="content">Data Asuransi</p>
-<div class="content">
-    <div *ngFor="let dataAsuransi of dataAsuransi; index as productId">
-        <div> Produk Asuransi : {{ dataAsuransi.produk }}</div>
-        <div> uangPertanggungan : {{dataAsuransi.uangPertanggungan}}</div>
-        <div> premi : {{dataAsuransi.premi}}</div>
-        <div>frekuensiBayar : {{dataAsuransi.frekuensiBayar}}</div>
-        <div>jangkaWaktu : {{dataAsuransi.jangkaWaktu}}</div>
-        <div>masaBayarPremi: {{dataAsuransi.masaBayarPremi}}</div>
-    </div>    
-</div>
-<p class="content">Informasi Pembayaran</p>
-<div class="content">
-  <div>Rekening Sumber Dana : <input type="text" id="sumberDana" name="sumberDana" disabled="true" value="Tabungan Danamon... 003598591234 IDR 15.192.000,00" size="50"></div>
-  <div>Kode Referal : <input type="text" id="koderef" name="koderef" disabled="true" value="Silahkan Ketik"></div>      
-</div>
-<div class="content">
-    <div>
-        <a class="card" routerLink="/JiwaData" routerLinkActive="active">Kembali</a>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">ASURANSI JIWA DETAIL</div>
+        <div class="panel-body">
+          <div *ngFor="let detail_asuransi of detail_asuransi; index as productId">
+            <div> Produk Asuransi : {{ detail_asuransi.produk }}</div>
+            <div> Uang Pertanggungan : {{detail_asuransi.uang_pertanggungan}}</div>
+            <div> Premi : {{detail_asuransi.premi}}</div>
+            <div>Frekuensi Bayar : {{detail_asuransi.frekuensi_bayar}}</div>
+            <div>Jangka Waktu Perlindungan: {{detail_asuransi.jangka_waktu_perlindungan}}</div>
+            <div>Masa Bayar Premi: {{detail_asuransi.masa_bayar_premi}}</div>
+          </div><hr/>
+          <b>Informasi Pembayaran</b>
+          <div class="content">
+            <div>Rekening Sumber Dana : <input type="text" id="sumberDana" name="sumberDana" value="Tabungan Danamon... 003598591234 IDR 15.192.000,00" size="50"></div>
+            <div>Kode Referal : <input type="text" id="koderef" name="koderef" value=""></div>      
+          </div>
+        </div>
+        <div class="panel-footer" style="text-align: left;">
+            <div class="row">
+                <div class="col-sm-4"><a routerLink="/JiwaData" routerLinkActive="active">Kembali</a></div>
+                <div class="col-sm-4"><a routerLink="/JiwaKonfirmasi" routerLinkActive="active">Lanjut</a></div>
+            </div>
+        </div>
       </div>
-      <div>
-        <a class="card" routerLink="/JiwaKonfirmasi" routerLinkActive="active">Lanjut</a>
-      </div>
-</div>
+    </div>
+  </div>
+</div><br><br>

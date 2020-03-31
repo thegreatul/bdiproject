@@ -14,60 +14,75 @@ background-position: center;
 }
 
 </style>
-<div class="content" role="main">
-    <div class="card highlight-card card-small">
-       ASURANSI JIWA
-    </div>  
-</div>
-<p class="content">Kesesuaian Produk Asuransi</p>
-<div class="content">
-    <div>
-        <p>Apakah besar Premi bulanan yang akan Anda bayarkan melebihi 10% dari total pendapatan bulanan Anda?</p>
-    </div>
-    <div>
-        <input type="radio" id="1" name="pendapatan" value="Ya">
-        <label for="1">Ya</label>
-        <input type="radio" id="2" name="pendapatan" value="Tidak">
-        <label for="2">Tidak</label>
-    </div>
-    <hr/>
-    <div>
-        <input type="checkbox" name="sesuaiKebutuhan" value="1" checked="checked" />
-        <p>Program Asuransi Primajaga 100 life basic yang telah dijelaskan oleh tenaga pemasar telah sesuai dengan kebutuhan saya</p>
-    </div>
-</div>
-<p class="content">Data Peserta Asuransi</p>
-<div class="content">
-    <div *ngFor="let dataPeserta of dataPeserta; index as productId">
-        <div> Nama Lengkap : {{ dataPeserta.fullname }}</div>
-        <div> Jenis Kelamin : {{dataPeserta.gender}}</div>
-        <div> No Identitas : {{dataPeserta.noid}}</div>
-        <div>tempat Lahir : {{dataPeserta.tempatLahir}}</div>
-        <div>tanggal Lahir : {{dataPeserta.tanggalLahir}}</div>
-        <div>status: {{dataPeserta.status}}</div>
-        <div>alamat Identitas: {{dataPeserta.alamatIdentitas}}</div>
-        <div>kota: {{dataPeserta.kota}}</div>
-        <div>provinsi: {{dataPeserta.provinsi}}</div>
-        <div>negara: {{dataPeserta.negara}}</div>
-        <div>kodepos: {{dataPeserta.kodepos}}</div>
-        <div>handphone: {{dataPeserta.handphone}}</div>
-        <div>email: {{dataPeserta.email}}</div>
-    </div>    
-</div>
-<p class="content">Data Ahli Waris</p>
-<div class="content">
-    <div>Nama Lengkap : <input type="text" id="fname" name="fname" disabled="true" value="Andi Setiawan"></div>
-    <div>Tanggal Lahir : <input type="text" id="ttl" name="ttl" disabled="true" value="20/10/1980"></div>
-    <div>Jenis Kelamin :
-        <input type="radio" id="1" name="male" value="Ya" checked="checked">Pria
-        <input type="radio" id="2" name="female" value="Tidak"> Wanita
-    </div>
-    <div>Hubungan : <input type="text" id="relasi" name="relasi" disabled="true" value="Saudara Kandung"></div>
-    <div>
-        <a class="card" routerLink="/JiwaDetail" routerLinkActive="active">Ulangi</a>
+
+<div class="container">    
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">ASURANSI JIWA</div>
+          <div class="panel-body">
+            <b>Kesesuaian Produk Asuransi</b><hr/>
+            <div>
+                <div>
+                    <p>Apakah besar Premi bulanan yang akan Anda bayarkan melebihi 10% dari total pendapatan bulanan Anda?</p>
+                </div>
+                <div>
+                    <input type="radio" id="1" name="pendapatan1" value="Ya" checked="checked">Ya
+                    <input type="radio" id="2" name="pendapatan2" value="Tidak"> Tidak
+                </div>
+                <hr/>
+                <div>
+                    <input type="checkbox" name="sesuaiKebutuhan" value="1" checked="checked" />
+                    <p>Program Asuransi Primajaga 100 life basic yang telah dijelaskan oleh tenaga pemasar telah sesuai dengan kebutuhan saya</p>
+                </div>
+                <hr/>
+                <div>
+                    <input type="checkbox" name="sesuaiKebutuhan" value="1" checked="checked" />
+                    <p>Saya sebagai Calon Peserta menyatakan bahwa Saya dalam keadaan sehat dan tidak ada gejala atau tanda-tanda menderita penyakit atau kelainan. Saya tidak pernah menunjukan gejala penyakit, tidak pernah didiagnosa ataupun mendapatkan pengobatan untuk kanker atau pertumbuhan sel lainnya, tekanan darah tinggi, nyeri dada, serangan jantung, stroke, kencing manis, hepatitis, penyakit jiwa, epilepsi, HIV/AIDS, kelainan yang berhubungan dengan pembuluh darah, sistem pernafasan, darah, ginjal, hati, lambung, atau saluran pencernaan, dan selama 3 (tiga) tahun terakhir tidak pernah konsultasi ke dokter, menjalani perawatan di RUmah Sakit, melakukan tes diagnosa ataupun mengonsumsi obat secara rutin. Saya tidak pernah ditolak pada pengajuan Aplikasi Asuransi atau dikenakan premi tambahan/pengecualian/penawaran lain baik di PT. Asuransi Jiwa Manulife Indonesia maupun di perusahaan asuransi lain.</p>
+                </div><hr/>
+                <div>
+                    <input type="checkbox" name="sesuaiKebutuhan" value="1" checked="checked" />
+                    <p>Informasi yang saya berikan adalah benar dan jika ternyata tidak benar maka polis dapat dibatalkan sesuai ketentuan Manulife</p>
+                </div><hr/>
+            </div>
+            <b>Data Peserta</b><hr/>
+            <div class="content">
+                <div *ngFor="let data_peserta of data_peserta">
+                    <div> Nama Lengkap : {{ data_peserta.nama_lengkap }}</div>
+                    <div> Jenis Kelamin : {{ data_peserta.jenis_kelamin }}</div>
+                    <div> No Identitas : {{ data_peserta.no_id }}</div>
+                    <div> Tempat Lahir : {{ data_peserta.tempat_lahir }}</div>
+                    <div> Tanggal Lahir : {{ data_peserta.tanggal_lahir }}</div>
+                    <div> Status Perkawinan : {{ data_peserta.status_perkawinan }}</div>
+                    <div> Alamat : {{ data_peserta.alamat }}</div>
+                    <div> Kota : {{ data_peserta.kota }}</div>
+                    <div> Provinsi : {{ data_peserta.provinsi }}</div>
+                    <div> Negara : {{ data_peserta.negara }}</div>
+                    <div> Kode Pos : {{ data_peserta.kode_Pos }}</div>
+                    <div> No Handphone : {{ data_peserta.no_hp }}</div>
+                    <div> Alamat Email : {{ data_peserta.email }}</div>
+                </div>    
+            </div><hr/>
+            <b>Data Ahli Waris</b><hr/>
+            <div>
+                <div>Nama Lengkap : <input type="text" id="fname" name="fname" value=""></div>
+                <div>Tanggal Lahir : <input type="text" id="ttl" name="ttl" value=""></div>
+                <div>Jenis Kelamin :
+                    <input type="radio" id="1" name="male" value="Ya" checked="checked">Pria
+                    <input type="radio" id="2" name="female" value="Tidak"> Wanita
+                </div>
+                <div>Hubungan : <input type="text" id="relasi" name="relasi" value="Saudara Kandung"></div>
+                
+            </div>
+          </div>
+          <div class="panel-footer" style="text-align: left;">
+            <div class="row">
+                <div class="col-sm-4"><a routerLink="/JiwaDetail" routerLinkActive="active">Ulangi</a></div>
+                <div class="col-sm-4"><a routerLink="/JiwaPembayaran" routerLinkActive="active">Lanjut</a></div>
+            </div>
+        </div>
+        </div>
       </div>
-      <div>
-        <a class="card" routerLink="/JiwaPembayaran" routerLinkActive="active">Lanjut</a>
-      </div>
-</div>
+    </div>
+  </div><br><br>
 

@@ -12,40 +12,45 @@ background-position: center;
 }
 
 </style>
-<div class="content" role="main">
-    <div class="card highlight-card card-small">
-       Konfirmasi ASURANSI JIWA
-    </div>  
-</div>
-<p class="content"><b>Informasi</b></p>
-<div class="content">
-    <div *ngFor="let dataKonfirmasi of dataKonfirmasi; index as productId">
-        <div> Sumber Rekening : {{ dataKonfirmasi.rekSumber }}</div>
-        <div> Produk Asuransi : {{ dataKonfirmasi.produk }}</div>
-        <div> uangPertanggungan : {{dataKonfirmasi.uangPertanggungan}}</div>
-        <div> premi : {{dataKonfirmasi.premi}}</div>
-        <div>frekuensiBayar : {{dataKonfirmasi.frekuensiBayar}}</div>
-        <div>jangkaWaktu : {{dataKonfirmasi.jangkaWaktu}}</div>
-        <div>masaBayarPremi: {{dataKonfirmasi.masaBayarPremi}}</div>
-    </div>    
-</div>
-<p class="content"><b>Syarat dan Ketentuan</b></p>
-<div class="content">
-    <div>
-        <input type="checkbox" name="syaratKententuan" value="1" checked="checked" />
-        <p>Saya telah memahami dan menyetujui Syarat dan Ketentuan yang berlaku.</p>
-    </div>
-</div>
-<p class="content"><b>Otorisasi Transaksi</b></p>
-<div class="content">
-    <div>OTP (One Time Password) : <input type="text" id="otp" name="otp" disabled="true" value="*******53"></div>
-</div>
 
-<div class="content">
-    <div>
-        <a class="card" routerLink="/JiwaPembayaran" routerLinkActive="active">Ubah</a>
+<div class="container">    
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Konfirmasi Asuransi Jiwa</div>
+            <div class="panel-body">
+                <b>Informasi</b><hr/>
+                <div class="content">
+                    <div *ngFor="let dataKonfirmasi of dataKonfirmasi; index as productId">
+                        <div> Sumber Rekening : {{ dataKonfirmasi.rekSumber }}</div>
+                        <div> Produk Asuransi : {{ dataKonfirmasi.produk }}</div>
+                        <div> Uang Pertanggungan : {{dataKonfirmasi.uangPertanggungan}}</div>
+                        <div> Premi : {{dataKonfirmasi.premi}}</div>
+                        <div> Frekuensi Bayar : {{dataKonfirmasi.frekuensiBayar}}</div>
+                        <div> Jangka Waktu : {{dataKonfirmasi.jangkaWaktu}}</div>
+                        <div> Masa Bayar Premi: {{dataKonfirmasi.masaBayarPremi}}</div>
+                    </div>    
+                </div>
+                <p></p>
+                <b>Syarat dan Ketentuan</b><hr/>
+                <div>
+                    <div>
+                        <input type="checkbox" name="syaratKententuan" value="1" checked="checked" />
+                        <p>Saya telah memahami dan menyetujui Syarat dan Ketentuan yang berlaku.</p>
+                    </div>
+                </div>
+                <b>Otorisasi Transaksi</b><hr/>
+                <div>
+                    <div>OTP (One Time Password) : <input type="text" id="otp" name="otp" value="*******53"></div>
+                </div>
+            </div><hr/>
+            <div class="panel-footer" style="text-align: left;">
+                <div class="row">
+                    <div class="col-sm-4"><a routerLink="/JiwaPembayaran" routerLinkActive="active">Ubah</a></div>
+                    <div class="col-sm-4"><a routerLink="/JiwaInformasi" routerLinkActive="active">Kirim</a></div>
+                </div>
+            </div>
+        </div>
       </div>
-      <div>
-        <a class="card" routerLink="/JiwaInformasi" routerLinkActive="active">Kirim</a>
-      </div>
-</div>
+    </div>
+  </div><br><br>

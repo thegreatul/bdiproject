@@ -11,38 +11,40 @@ background-position: center;
 }
 
 </style>
-<div class="content" role="main">
-    <div class="card highlight-card card-small">
-      Informasi ASURANSI JIWA
-    </div>  
-</div>
-<div class="content">
-    <div>Informasi</div>
-    <b>Pengajuan aplikasi sedang dalam tahap verifikasi</b>
-    <p>Selamat, pengajuan produk asuransi Primajaga 100 Anda sudah berhasil diajukan. Saat ini dalam tahap verifikasi oleh Manulife Indonesia. E-Certificate Asuransi Anda akan dikirimkan ke inbox D-Bank / alamat email terdaftar jika pengajuan Anda disetujui.</p>
-</div>
-<p class="content"><b>Informasi</b></p>
-<div class="content">
-    <div *ngFor="let dataReferensi of dataReferensi; index as productId">
-        <div> No. Referensi : {{ dataReferensi.noRef }}</div>
-        <div> Tanggal : {{ dataReferensi.tanggal }}</div>
-        <div> Sumber Rekening : {{ dataReferensi.rekSumber }}</div>
-        <div> Produk Asuransi : {{ dataReferensi.produk }}</div>
-        <div> uangPertanggungan : {{dataReferensi.uangPertanggungan}}</div>
-        <div> premi : {{dataReferensi.premi}}</div>
-        <div>frekuensiBayar : {{dataReferensi.frekuensiBayar}}</div>
-        <div>jangkaWaktu : {{dataReferensi.jangkaWaktu}}</div>
-        <div>masaBayarPremi: {{dataReferensi.masaBayarPremi}}</div>
-    </div>    
-</div>
-<div class="content">
-    <div>
-        <a class="card" routerLink="" routerLinkActive="active">Cetak</a>
+
+<div class="container">    
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Informasi Asuransi Jiwa</div>
+            <div class="panel-body">
+                <div class="content" style="text-align: center; color: rgb(7, 133, 43);">
+                    <b>Pengajuan aplikasi sedang dalam tahap verifikasi</b>
+                    <p>Selamat, pengajuan produk asuransi Primajaga 100 Anda sudah berhasil diajukan. Saat ini dalam tahap verifikasi oleh Manulife Indonesia. E-Certificate Asuransi Anda akan dikirimkan ke inbox D-Bank / alamat email terdaftar jika pengajuan Anda disetujui.</p>
+                </div>
+                <p class="content"><b>Informasi</b></p>
+                <div class="content">
+                    <div *ngFor="let dataReferensi of dataReferensi; index as productId">
+                        <div> No. Referensi : {{ dataReferensi.noRef }}</div>
+                        <div> Tanggal : {{ dataReferensi.tanggal }}</div>
+                        <div> Sumber Rekening : {{ dataReferensi.rekSumber }}</div>
+                        <div> Produk Asuransi : {{ dataReferensi.produk }}</div>
+                        <div> Uang Pertanggungan : {{dataReferensi.uangPertanggungan}}</div>
+                        <div> Premi : {{dataReferensi.premi}}</div>
+                        <div> Frekuensi Bayar : {{dataReferensi.frekuensiBayar}}</div>
+                        <div> Jangka Waktu : {{dataReferensi.jangkaWaktu}}</div>
+                        <div> Masa Bayar Premi: {{dataReferensi.masaBayarPremi}}</div>
+                    </div>    
+                </div>
+            </div><hr/>
+            <div class="panel-footer" style="text-align: left;">
+                <div class="row">
+                    <div class="col-sm-4"><a routerLink="" routerLinkActive="active">Cetak</a></div>
+                    <div class="col-sm-4"><a routerLink="" routerLinkActive="active">Simpan</a></div>
+                    <div class="col-sm-4"><a routerLink="/JiwaDetailStatus" routerLinkActive="active">OK</a></div>
+                </div>
+            </div>
+        </div>
+      </div>
     </div>
-    <div>
-        <a class="card" routerLink="" routerLinkActive="active">Simpan</a>
-    </div>
-    <div>
-        <a class="card" routerLink="/AsuransiSaya" routerLinkActive="active">OK</a>
-    </div>
-</div>
+  </div><br><br>

@@ -18,7 +18,9 @@ import { AsuransiJiwaInformasiComponent } from './asuransiJiwaInformasi/jiwaInfo
 import { AsuransiJiwaDetailStatusComponent } from './asuransiJiwaDetailStatus/jiwaDetailStatus.component';
 import { AsuransiPerjalananComponent } from './asuransiPerjalanan/asuransiPerjalanan.component';
 import { AsuransiMobilComponent } from './asuransiMobil/asuransiMobil.component';
+import { DetailPromoComponent } from './detailPromo/detailPromo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
  
 @NgModule({
   declarations: [
@@ -35,13 +37,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AsuransiJiwaInformasiComponent,
     AsuransiJiwaDetailStatusComponent,
     AsuransiPerjalananComponent,
-    AsuransiMobilComponent
+    AsuransiMobilComponent,
+    DetailPromoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     NgbModule,
+    HttpClientModule,
     RouterModule.forRoot(
       [
         { path: 'SemuaProduk', component: SemuaProdukComponent },
@@ -56,7 +60,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         { path: 'JiwaInformasi', component: AsuransiJiwaInformasiComponent },
         { path: 'JiwaDetailStatus', component: AsuransiJiwaDetailStatusComponent },
         { path: 'AsuransiPerjalanan', component: AsuransiPerjalananComponent },
-        { path: 'AsuransiMobil', component: AsuransiMobilComponent }
+        { path: 'AsuransiMobil', component: AsuransiMobilComponent },
+        { path: 'DetailPromo', component: DetailPromoComponent }
       ]
     ),
     BrowserAnimationsModule
