@@ -4,11 +4,158 @@
         <div class="panel panel-primary">
           <div class="panel-heading">ASURANSI MOBIL</div>
             <div class="panel-body">
-              <div class="col-sm-6">
-                <b>Informasi Asuransi Mobil</b><hr/>
+              <div class="col-sm-8">
+                <b>Data Asuransi</b><hr/>
+                <div class="row">
+                  <div class="col-sm-8">Tahun Kendaraan:</div>
+                  <div class="col-sm-4">
+                    <select id="tahun">
+                      <option value="1">2019</option>
+                      <option value="2">2018</option>
+                      <option value="3">2017</option>
+                      <option value="4">2016</option>
+                      <option value="5">2015</option>
+                      <option value="6">2014</option>
+                      <option value="7">2013</option>
+                      <option value="8">2012</option>
+                      <option value="8">2011</option>
+                      <option value="8">2010</option>
+                      <option value="8">2009</option>
+                      <option value="8">2008</option>
+                      <option value="8">2007</option>
+                    </select> 
+                  </div>
+                  <div class="col-sm-8">Merk Mobil:</div>
+                  <div class="col-sm-4">
+                    <select id="merk">
+                      <option value="1">Daihatsu</option>
+                      <option value="2">Honda</option>
+                      <option value="3">Mazda</option>
+                      <option value="4">Toyota</option>
+                      <option value="5">BMW</option>
+                      <option value="6">Marcedez Benz</option>
+                      <option value="7">Wuling</option>
+                      <option value="8">Hyundai</option>
+                      <option value="8">Kia</option>
+                      <option value="8">Porsche</option>
+                      <option value="8">Lamborgini</option>
+                      <option value="8">Ferari</option>
+                      <option value="8">Ford</option>
+                    </select> 
+                  </div>
+                  <div class="col-sm-8">Type/Model Mobil:</div>
+                  <div class="col-sm-4">
+                    <select id="tipe">
+                      <option value="1">JAZZ ALL NEW A I-VTEC 1.5 M/T</option>
+                      <option value="2">ALL NEW CITY I-VTECT AT</option>
+                      <option value="3">ALL ACCORD I-VTECT AT</option>
+                      <option value="4">BRV 1.5 AT</option>
+                    </select> 
+                  </div>
+                  <div class="col-sm-8">Kode Wilayah Plat</div>
+                  <div class="col-sm-4">
+                    <select id="plat">
+                      <option value="1">B Jakarta</option>
+                      <option value="2">D Bandung</option>
+                      <option value="3">L Surabaya</option>
+                      <option value="4">N Malang</option>
+                    </select> 
+                  </div>
+                  <div class="col-sm-8">Tanggal Polis Berlaku :</div>
+                  <div class="col-sm-4">                
+                    <input type="text" ngbDatepicker #d="ngbDatepicker" placeholder="yyyy-mm-dd"/>
+                    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">(periode perlindungan 1 tahun</button>
+                  </div>
+                </div>
               </div>
             </div>
         </div>
         </div>
       </div>
-    </div><br>
+    </div>
+
+    <style>
+      /* Datepicker popup icon */
+      
+      button.calendar, button.calendar:active {
+      width: 2.75rem;
+      height: 2.35rem;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=') !important;
+      background-repeat: no-repeat;
+      background-size: 23px;
+      background-position: center;
+      }
+      
+      </style>
+      
+      <div class="container">    
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="panel panel-primary">
+              <div class="panel-body">
+                <div class="col-sm-6">
+                  <b>+ Tambahkan Perlindungan Aksesoris Kendaraan</b><hr/>
+                  <div class="col-sm-1">
+                    <input type="checkbox" name="Kaca" value="1" checked="checked" />
+                  </div>
+                  <div class="col-sm-4">Kaca Film</div>
+                </div>
+              </div>
+              <div class="panel-body">
+                <div class="col-sm-6">
+                  <div class="col-sm-1">
+                    <input type="checkbox" name="Karpet" value="1" checked="checked" />
+                  </div>
+                  <div class="col-sm-4">Karpet Mobil Sintetik</div>
+                </div>
+              </div>
+              <div class="panel-body">
+                <div class="col-sm-6">
+                  <div class="col-sm-1">
+                    <input type="checkbox" name="Jok" value="1" checked="checked" />
+                  </div>
+                  <div class="col-sm-4">Jok Kulit Paten</div>
+                </div>
+              </div>
+              <div class="panel-body">
+                <div class="col-sm-6">
+                  <div class="col-sm-1">
+                    <input type="checkbox" name="Velg" value="1" checked="checked" />
+                  </div>
+                  <div class="col-sm-4">Velg dan Ban</div>
+                </div>
+              </div>
+              <div class="panel-body">
+                <div class="col-sm-6">
+                  <div class="col-sm-4">Lainnya (Sebutkan)</div>
+                  <div class="col-sm-1">
+                    <input type="text" name="Lainnya" value=""/>
+                  </div>
+                </div>
+              </div><hr/>
+              <div class="panel-body">
+                <div class="col-sm-6">
+                  <div class="col-sm-8">Total Nilai Aksesoris tambahan <b>IDR 1.500.000</b></div>
+                </div>
+                <div class="col-sm-8"><i>(Maksimal nilai pertanggungan semua aksesoris sebesar IDR 15jt)</i></div>        
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:10%">
+                </div>
+              </div>
+              <div>IDR 500.000</div>
+            </div>
+            <div class="panel-footer" style="text-align: left;">
+              <div class="row">
+                  <div class="col-sm-4"><a routerLink="/SemuaProduk" routerLinkActive="active">Kembali</a></div>
+                  <div class="col-sm-4"><a routerLink="/CariMobil" routerLinkActive="active">Cari Asuransi Mobil</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><br>
+      
+      
+      
+      
+      

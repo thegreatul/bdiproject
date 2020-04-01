@@ -1,0 +1,40 @@
+<div class="container">    
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Total Lost Only Autocilin</div>
+          <div class="panel-body">
+            <div *ngFor="let mobil of mobil" class="card-container">
+                <div > {{ mobil.asuransi_1.nama_produk }}</div>
+                <div > {{ mobil.asuransi_1.merk }}</div>
+                <div > {{ mobil.asuransi_1.konten_1.judul }}</div>
+                <div > {{ mobil.asuransi_1.konten_1.deskripsi }}</div>
+                <div > {{ mobil.asuransi_1.konten_2.judul }}</div>
+                <div > {{ mobil.asuransi_1.konten_2.deskripsi }}</div>  
+            </div>
+          </div>
+          <div class="panel-footer">
+            <a routerLink="/AsuransiMobilDetail" routerLinkActive="active">Pilih</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading" style="text-decoration-color: indianred;">Comprehensive (All Risk)</div>
+          <div class="panel-body">
+            <div *ngFor="let mobil of mobil" class="card-container">
+                <div > {{ mobil.asuransi_2.nama_produk }}</div>
+                <div > {{ mobil.asuransi_2.merk }}</div>
+                <div > {{ mobil.asuransi_2.konten_1.judul }}</div>
+                <div > {{ mobil.asuransi_2.konten_1.deskripsi }}</div>
+                <div > {{ mobil.asuransi_2.konten_2.judul }}</div>
+                <div > {{ mobil.asuransi_2.konten_2.deskripsi }}</div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <a routerLink="/AsuransiMobilDetail" routerLinkActive="active">Pilih</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -21,6 +21,7 @@ import { AsuransiMobilComponent } from './asuransiMobil/asuransiMobil.component'
 import { DetailPromoComponent } from './detailPromo/detailPromo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { AsuransiMobilCariComponent } from './asuransiMobilCari/asuransiMobilCari.component';
  
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     AsuransiJiwaDetailStatusComponent,
     AsuransiPerjalananComponent,
     AsuransiMobilComponent,
+    AsuransiMobilCariComponent,
     DetailPromoComponent
   ],
   imports: [
@@ -61,6 +63,7 @@ import { HttpClientModule } from '@angular/common/http';
         { path: 'JiwaDetailStatus', component: AsuransiJiwaDetailStatusComponent },
         { path: 'AsuransiPerjalanan', component: AsuransiPerjalananComponent },
         { path: 'AsuransiMobil', component: AsuransiMobilComponent },
+        { path: 'CariMobil', component: AsuransiMobilCariComponent },
         { path: 'DetailPromo', component: DetailPromoComponent }
       ]
     ),
